@@ -1,0 +1,90 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Bad Script', cursive;
+}
+.slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0;
+}
+.item {
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100vh;
+    -webkit-transition: ease-out 0.5s;
+    transition: ease-out 0.5s;
+}
+.item:hover {
+    -webkit-box-flex: 100%;
+    -ms-flex-positive: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    cursor: pointer;
+}
+.item span {
+    font-size: 46px;
+    color: #fff;
+    text-shadow: 1px 1px 2px black, 0 0 1em #ccc;
+}
+.item-1 {
+    background: url("../img/1.jpg") no-repeat center center;
+    background-size: cover;
+}
+.item-2 {
+    background: url("../img/2.jpg") no-repeat center center;
+    background-size: cover;
+}
+.item-3 {
+    background: url("../img/3.jpg") no-repeat center center;
+    background-size: cover;
+}
+.item-4 {
+    background: url("../img/4.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+
+@media screen and (max-width: 768px) {
+    .slider {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        height: 100vh
+    }
+    .item {
+        width: 100%;
+    }
+    .item:hover {
+        -webkit-box-flex: 30%;
+        -ms-flex-positive: 30%;
+        flex-grow: 30%;
+    }
+    .item span {
+        font-size: 24px;
+    }
+}
